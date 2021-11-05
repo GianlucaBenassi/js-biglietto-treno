@@ -23,6 +23,8 @@ do {
     
 } while (isNaN(age) || age < 0);
 
+age = Math.floor(age);
+
 // price calculation
 if (age < 18) {
 
