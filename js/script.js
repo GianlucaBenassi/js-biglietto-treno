@@ -11,4 +11,5 @@ if (age < 18) {
     price = km * 0.21
 }
 
+price = price.toFixed(2);
 console.log(price);
