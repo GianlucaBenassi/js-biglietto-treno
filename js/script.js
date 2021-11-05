@@ -1,6 +1,7 @@
 let km;
 let age;
 let price;
+let htmlElement;
 
 // ask km until correct number
 do {
@@ -24,11 +25,23 @@ do {
 
 // price calculation
 if (age < 18) {
+
     price = km * 0.21 * 80 / 100;
+
+    htmlElement = document.getElementById('age');
+    htmlElement.insertAdjacentHTML('afterend', '<span>Sconto applicato: 20% </span>');
+
 } else if (age > 65) {
+
     price = km * 0.21 * 60 / 100;
+
+    htmlElement = document.getElementById('age');
+    htmlElement.insertAdjacentHTML('afterend', '<span>Sconto applicato: 40% </span>');
+
 } else {
+
     price = km * 0.21;
+
 }
 
 price = price.toFixed(2);
